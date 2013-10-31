@@ -43,7 +43,7 @@ FALLBACK_STYLEROOT="/usr/share/xml/docbook/stylesheet/nwalsh/current"
 ## information on profiling
 ##
 #PROFARCH=""
-#PROFCONDITION=""
+#PROFCONDITION="bazar"
 #PROFOS=""
 #PROFVENDOR=""
 

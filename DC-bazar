@@ -36,6 +36,8 @@ FALLBACK_STYLEROOT="/usr/share/xml/docbook/stylesheet/suse"
 #HTML_CSS=""
 #EPUB_CSS=""
 
+FOP_CONFIG_FILE="xsl/fo/fop-daps.xml"
+
 ##---------------------
 ## Profiling Parameters
 ## For elements with arch="...", condition="...", os="..." and vendor="..."
@@ -43,10 +45,9 @@ FALLBACK_STYLEROOT="/usr/share/xml/docbook/stylesheet/suse"
 ## information on profiling
 ##
 #PROFARCH=""
-#PROFCONDITION=""
+PROFCONDITION="bazar"
 #PROFOS=""
 #PROFVENDOR=""
-
 
 ## If you want to be able to source this file, so you do not have
 ## to specify the -d/--docconfig option with daps, uncomment the
