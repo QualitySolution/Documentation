@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" type="text/xml"
+title="Profiling step" ?>
+
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
+<!ENTITY % entities SYSTEM "entities.ent">
+%entities; ]>
+
+  <chapter id="Users">
+    <title>Работа с пользователями</title>
+    <para>В программе каждый пользователь подключается к базе MySQL под своей учетной записью, это позволяет применять права доступа на уровне сервера баз данных. В то же время, в программе имеется внутренний справочник пользователей, позволяющий задавать некоторые права на уровне программы и вносить имена пользователей на русском языке.</para>
+    <para>Если пользователь создан с помощью MySQL, то при первом входе в программу его логин автоматически добавляется во внутренний справочник пользователей и становится доступен через меню <guimenu>Файл</guimenu> пункт <guimenuitem>Пользователи</guimenuitem>.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="Users.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <warning>
+      <para>Этот пункт меню доступен только пользователям с правом <guilabel>Администрирования пользователей</guilabel>.</para>
+    </warning>
+    <para condition="bazar">Помимо права изменять существующих в программе пользователей, пользователю также можно дать право изменять кассовые документы задним числом, то есть созданные не сегодня.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="User.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <section>
+      <title>Безопасность сервера баз данных</title>
+      <para>При доступе к серверу MySQL через интернет обратите особое внимание на безопасность сервера в целом. Программа &product_name; при соединение с сервером не использует шифрование, поэтому пароли пользователей относительно легко перехватить, наиболее безопасным вариантом организации удаленного доступа будет работа с удаленным сервером через VPN-туннель.</para>
+      <para>Также, обратите внимание, что программа при создании учетной записи с правом администрирования пользователей дает этому пользователю права на доступ к внутренней базе mysql и таблице со всеми пользователями сервера, при этом позволяя ему соединятся с любого хоста. Поэтому, злоумышленник перехватив пароль такого пользователя может получить доступ к любой базе на сервере или скинуть пароль root-а. Для того чтобы избежать такой ситуации, не давайте удаленным пользователям право администратора и ограничьте доступ пользователей с правом администратора только c localhost или внутренней сети. Это можно сделать средствами MySQL.</para>
+    </section>
+    <section id="Add_users">
+      <title>Добавление пользователей средствами MySQL</title>
+      <para>Вы можете добавлять и удалять пользователей средствами MySQL, это может дать вам более гибкое управление правами пользователя, например позволит ограничить доступ к базе данных только с определенных компьютеров.</para>
+      <para>В этом разделе рассмотрим простое создание пользователя с помощью WorkBench. Для этого подсоединитесь к серверу в режиме <guilabel>Server Administration</guilabel> перейдите в раздел <literal>Users and Privileges</literal> и нажмите кнопку <guibutton>Add Account</guibutton>.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject role="fo">
+            <imagedata width="100%" scalefit="1" fileref="6-AddUser.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata fileref="6-AddUser.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На вкладке <literal>Login</literal> вводим имя нового пользователя и пароль. Сохранить пользователя можно нажав <literal>Apply</literal>.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="7-UserName.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Теперь надо дать нашему новому пользователю доступ к базе &dbname;. Для этого переходим на вкладку <literal>Schema Privileges</literal>. Выбираем нашего пользователя и нажимаем кнопку <literal>Add Entry..</literal>.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="8-UserPermission.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Выбираем <literal>Selected Schema</literal> и указываем базу данных &dbname;. Нажимаем «Ok».</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="9-BasePermission.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Строчка с правами добавилась в таблицу, теперь нажимаем <literal>Select ALL</literal> и <literal>Save Changes</literal>.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="10-SetPermission.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Все, добавление нового пользователя закончено, теперь под ним можно зайти в базу. При первом входе в базу он автоматически добавится во внутреннюю таблицу пользователей программы &product_name;.</para>
+    </section>
+  </chapter>
+

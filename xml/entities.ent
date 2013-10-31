@@ -1,0 +1,35 @@
+<!--the following declarations are contained in the file entities.ent -->
+
+<!ENTITY company "Quality Solution">
+
+<!ENTITY productname  
+ '<phrase condition="bazar">QS: База арендаторов</phrase>
+  <phrase condition="workwear">QS: Учет спецодежды и имущества</phrase>'>
+
+<!ENTITY product_name '<productname>&productname;</productname>' >
+
+<!ENTITY productnumber  
+ '<productnumber condition="bazar">2.0</productnumber>
+  <productnumber condition="workwear">1.0</productnumber>'>
+
+<!ENTITY product_website 
+ '<phrase condition="bazar">bazar.qsolution.ru</phrase>
+  <phrase condition="workwear">workwear.qsolution.ru</phrase>'>
+
+<!ENTITY product_website_link 
+ '<ulink condition="bazar" url="http://bazar.qsolution.ru">bazar.qsolution.ru</ulink>
+  <ulink condition="workwear" url="http://workwear.qsolution.ru">workwear.qsolution.ru</ulink>'>
+
+<!ENTITY setup_name 
+ '<filename condition="bazar">bazar-x.x.x.exe</filename>
+  <filename condition="workwear">workwear-x.x.x.exe</filename>'>
+
+<!ENTITY dbname 
+ '<database condition="bazar">bazar</database>
+  <database condition="workwear">workwear</database>'>
+
+<!ENTITY config_file 
+ '<filename condition="bazar">bazar.ini</filename>
+  <filename condition="workwear">workwear.ini</filename>'>
+
+
