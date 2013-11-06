@@ -13,7 +13,8 @@ title="Profiling step" ?>
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="DeleteExample.png"/>
+          <imagedata condition="bazar" fileref="DeleteExample.png"/>
+          <imagedata condition="workwear" fileref="Workwear_Deletion.png"/>
         </imageobject>
       </mediaobject>
     </screenshot>

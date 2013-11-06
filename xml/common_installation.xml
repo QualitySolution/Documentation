@@ -1,89 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href="urn:x-daps:xslt:profiling:docbook45-profile.xsl" type="text/xml"
-title="Profiling step" ?>
-
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
+title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
 <!ENTITY % entities SYSTEM "entities.ent">
 %entities; ]>
-  <chapter>
-    <title>Установка программы</title>
-    <para>Программа является многопользовательской поэтому требует установки двух частей:<itemizedlist>
-        <listitem>
-          <para>клиентской части, это непосредственно сама программа устанавливаемая на каждый компьютер пользователя</para>
-        </listitem>
-        <listitem>
-          <para>серверной части, это база MySQL устанавливаемая только на один компьютер, на котором будут хранится все данные</para>
-        </listitem>
-      </itemizedlist></para>
-    <para>Если вы еще не определились будете использовать программу или нет и просто хотите посмотреть на ее в работе, тогда вам  нет необходимости устанавливать собственный сервер баз данных, можно подключиться к демонстрационному серверу с следующими настройками:</para>
-    <para>Сервер: <userinput>demo.qsolution.ru</userinput></para>
-    <para>Логин: <userinput>demo</userinput></para>
-    <para>Пароль: <userinput>demo</userinput></para>
+<chapter>
+  <title>Установка программы</title>
+  <para>Программа является многопользовательской, поэтому требует установки двух частей:<itemizedlist>
+      <listitem>
+        <para>клиентской части, это непосредственно сама программа, устанавливаемая на каждый компьютер пользователя</para>
+      </listitem>
+      <listitem>
+        <para>серверной части, это база MySQL, устанавливаемая только на один компьютер, на котором будут хранится все данные</para>
+      </listitem>
+    </itemizedlist></para>
+  <para>Если вы еще не определились, будете использовать программу или нет и просто хотите посмотреть на неё в работе, тогда вам  нет необходимости устанавливать собственный сервер баз данных, можно подключиться к демонстрационному серверу с следующими настройками:</para>
+  <para>Сервер: <userinput>demo.qsolution.ru</userinput></para>
+  <para>Логин: <userinput>demo</userinput></para>
+  <para>Пароль: <userinput>demo</userinput></para>
+  <section>
+    <title>Установка клиента на Windows</title>
+    <para>Для установки клиента на windows, скачайте с сайта &product_website_link; инсталятор для windows и запустите &setup_name;. Пройдите все шаги установщика. Установщик автоматически предложит установить библиотеку GTK# и при необходимости платформу .Net Framework.</para>
+    <warning>
+      <para>Для установки платформы .Net Framework на компьютере необходим доступ в интернет. Если вы устанавливаете программу на компьютер без интернета вы должны сами позаботится об установке .Net Framework 4.0</para>
+    </warning>
+  </section>
+  <section>
+    <title>Установка и настройка собственного сервера базы данных</title>
     <section>
-      <title>Установка клиента на Windows</title>
-      <para>Для установки клиента на windows, скачайте с сайта &product_website_link; инсталятор для windows и запустите &setup_name;. Пройдите все шаги установщика. Установщик автоматически предложит установить библиотеку GTK# и при необходимости платформу .Net Framework.</para>
+      <title>Установка сервера MySQL</title>
+      <para>Установите на компьютер, который будет использоваться в качестве сервера, базу данных MySQL, ее можно устанавливать на большинство операционных систем, таких как Linux, Mac OS, Windows и другие. Способ установки MySQL зависит от операционной системы, для подробных инструкций по установке вы можете обратится к документации вашей операционной системы. Версию для windows можно скачать с сайта разработчика <ulink url="http://www.mysql.com/downloads/mysql/#downloads">www.mysql.com</ulink>. Установку MySQL на Linux лучше производить из репозитория вашего дистрибутива.</para>
+    </section>
+    <section id="Install_base">
+      <title>Установка пустой базы</title>
+      <para>Для выполнения дальнейших действий по установке пустой базы мы рекомендуем использовать MySQL Workbench, но вы можете использовать любой другой инструмент, в зависимости от ситуации, например phpMyAdmin или консоль MySQL. Версию Workbench для Windows можно скачать <ulink url="http://www.mysql.com/downloads/workbench/">здесь</ulink>. На Linux также устанавливаем из репозиториев дистрибутива. </para>
       <warning>
-        <para>Для установки платформы .Net Framework на компьютере необходим досутуп в интернет. Если вы устанавливаете программу на компьютер без интернета вы должны сами позаботится об установке .Net Framework 4.0</para>
+        <para>Если на сервере работает Firewall, необходимо открыть порт 3306.</para>
       </warning>
+      <para>Добавляем новое соединение с сервером.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="1-NewConnection.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Вводим ip-адрес компьютера на котором установлен сервер, если сервер установлен на том же компьютер выбираем <literal>localhost</literal>.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="2-CreateConnection.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Проверяем настройки соединения, вводим имя пользователя в поле <literal>User name</literal>, кнопкой <guibutton>Store in Kеychain</guibutton> можно указать пароль для пользователя, который подключается к базе данных. В новой установке MySQL, администратор сервера по умолчанию <userinput>root</userinput>. Для удаленного подключения, возможно предварительно придется настроить MySQL на работу по сети, смотрите документацию MySQL.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject role="fo">
+            <imagedata width="100%" scalefit="1" fileref="3-ConnectionUser.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata fileref="3-ConnectionUser.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>В следующем окне можно настроить удаленное управление сервером, в нашем случае это не требуется, поэтому выбираем <guilabel>Do not use remote management</guilabel>. Нажимаем <guibutton>далее</guibutton>, помощник настроил соединение и завершит работу.</para>
+      <para>Теперь у нас в разделе <literal>Server Administrator</literal> появилось настроенное соединение. Заходим в консоль администратора кликнув по нашему соединению.</para>
+      <para>Переходим в раздел <literal>Data Import\Restore</literal>, выбираем пункт <literal>Import from Self-Contained File</literal> и указываем на файл пустой базы данных, скаченный с сайта. Нажимаем кнопку <guibutton>Start Import</guibutton>. После завершения импорта у нас появится база данных &dbname;.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject role="fo">
+            <imagedata width="100%" scalefit="1" fileref="5-ImportData.png"/>
+          </imageobject>
+          <imageobject role="html">
+            <imagedata fileref="5-ImportData.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
     </section>
-    <section>
-      <title>Установка и настройка собственного сервера базы данных</title>
-      <section>
-        <title>Установка сервера MySQL</title>
-        <para>Установите на компьютер, который будет использоваться в качестве сервера, базу данных MySQL, ее можно устанавливать на большинство операционных систем, таких как Linux, Mac OS, Windows и другие. Способ установки MySQL зависит от операционной системы, для подробных инструкций по установке вы можете обратится к документации вашей операционной системы. Версию для windows можно скачать с сайта разработчика <ulink url="http://www.mysql.com/downloads/mysql/#downloads">www.mysql.com</ulink>. Установку MySQL на Linux лучше производить из репозитория вашего дистрибутива.</para>
-      </section>
-      <section id="Install_base">
-        <title>Установка пустой базы</title>
-        <para>Для выполнения дальнейших действий по установке пустой базы мы рекомендуем использовать MySQL Workbench, но вы можете использовать любой другой инструмент, в зависимости от ситуации, например phpMyAdmin или консоль MySQL. Версию Workbench для Windows можно скачать <ulink url="http://www.mysql.com/downloads/workbench/">здесь</ulink>. На Linux также устанавливаем из репозиториев дистрибутива. </para>
-        <warning>
-          <para>Если на сервере работает Firewall, необходимо открыть порт 3306.</para>
-        </warning>
-        <para>Добавляем новое соединение с сервером.</para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="1-NewConnection.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>Вводим ip-адрес компьютера на котором установлен сервер, если сервер установлен на том же компьютер выбираем <literal>localhost</literal>.</para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="2-CreateConnection.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>Проверяем настройки соединения, вводим имя пользователя в поле <literal>User name</literal>, кнопкой <guibutton>Store in Kеychain</guibutton> можно указать пароль для пользователя, который подключается к базе данных. В новой установке MySQL, администратор сервера по умолчанию <userinput>root</userinput>. Для удаленного подключения, возможно предварительно придется настроить MySQL на работу по сети, смотрите документацию MySQL.</para>
-        <screenshot>
-          <mediaobject>
-            <imageobject role="fo">
-              <imagedata width="100%" scalefit="1" fileref="3-ConnectionUser.png"/>
-            </imageobject>
-            <imageobject role="html">
-              <imagedata fileref="3-ConnectionUser.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-        <para>В следующем окне можно настроить удаленное управление сервером, в нашем случае это не требуется, поэтому выбираем <guilabel>Do not use remote management</guilabel>. Нажимаем <guibutton>далее</guibutton>, помощник настроил соединение и завершит работу.</para>
-        <para>Теперь у нас в разделе <literal>Server Administrator</literal> появилось настроенное соединение. Заходим в консоль администратора кликнув по нашему соединению.</para>
-        <para>Переходим в раздел <literal>Data Import\Restore</literal>, выбираем пункт <literal>Import from Self-Contained File</literal> и указываем на файл пустой базы данных, скаченный с сайта. Нажимаем кнопку <guibutton>Start Import</guibutton>. После завершения импорта у нас появится база данных &dbname;.</para>
-        <screenshot>
-          <mediaobject>
-            <imageobject role="fo">
-              <imagedata width="100%" scalefit="1" fileref="5-ImportData.png"/>
-            </imageobject>
-            <imageobject role="html">
-              <imagedata fileref="5-ImportData.png"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </section>
-      <section id="FirstUser">
-        <title>Добавление первого пользователя</title>
-        <para>Пришло время добавить первого пользователя. Для этого запустите программу <productname>&productname;</productname>  и зайдите в базу под пользователем <userinput>root</userinput>. Вход в базу более подробно описан в <xref linkend="ConnectionToBase"/>.</para>
-        <para>Под администратором базы данных крайне не рекомендуется работать в программе. Поэтому программа при запуске сразу откроет диалог управления пользователями, чтобы вы смогли создать своих первых пользователей. Подробнее о создании пользователей смотрите <xref linkend="Users"/>. После создания пользователя, закройте диалог и зайдите в программу под созданным пользователем. Можно приступать к работе.</para>
-      </section>
+    <section id="FirstUser">
+      <title>Добавление первого пользователя</title>
+      <para>Пришло время добавить первого пользователя. Для этого запустите программу &product_name; и зайдите в базу под пользователем <userinput>root</userinput>. Вход в базу более подробно описан в <xref linkend="ConnectionToBase"/>.</para>
+      <para>Работать в программе под администратором базы данных крайне не рекомендуется. Поэтому программа при запуске сразу откроет диалог управления пользователями, чтобы вы смогли создать своих первых пользователей. Подробнее о создании пользователей смотрите <xref linkend="Users"/>. После создания пользователя, закройте диалог и зайдите в программу под созданным пользователем. Можно приступать к работе.</para>
     </section>
-  </chapter>
-
+  </section>
+</chapter>
