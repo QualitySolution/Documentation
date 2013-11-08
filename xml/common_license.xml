@@ -28,4 +28,46 @@ title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.
     <para>Если Вы дорабатываете программу своими силами, не забывайте, что отправляя нам свои доработки Вы можете значительно сократить стоимость поддержки вашей ветки, за счет объединения усилий.</para>
     <para>Мы также приглашаем к сотрудничеству партнеров для совместного развития и распространения программы.</para>
   </section>
+  <section>
+    <title>Использованные сторонние компоненты</title>
+    <para>В этом разделе перечислены все компоненты, библиотеки, изображения или другие произведения сторонних авторов, используемые нами в приложении.</para>
+    <section>
+      <title>Библиотеки</title>
+      <table rowsep="1">
+        <title>Используемые библиотеки</title>
+        <tgroup cols="3">
+          <thead>
+            <row>
+              <entry>Название</entry>
+              <entry>Сайт</entry>
+              <entry>Лицензия</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>GTK# + Mono</entry>
+              <entry>
+                <ulink url="http://www.mono-project.com">mono project</ulink>
+              </entry>
+              <entry>LGPL2</entry>
+            </row>
+            <row>
+              <entry>Majorsilence Reporting(FyiReporting)</entry>
+              <entry>
+                <ulink url="https://github.com/majorsilence/My-FyiReporting">github</ulink>
+              </entry>
+              <entry>Apache License v2.0</entry>
+            </row>
+            <row>
+              <entry>Nini</entry>
+              <entry>
+                <ulink url="http://nini.sourceforge.net/">nini.sourceforge.net</ulink>
+              </entry>
+              <entry>MIT license</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </section>
 </chapter>
