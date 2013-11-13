@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. -->
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" []>
+<section>
+  <title>Работа с печатными формами</title>
+  <para>Все печатные формы в программе формируются с помощью движка отчетов <ulink url="https://github.com/majorsilence/My-FyiReporting">Majorsilence Reporting</ulink>, поэтому могут быть изменены без правки кода программы.</para>
+  <para>Каждая печатная форма представляет из себя файл <ulink url="http://ru.wikipedia.org/wiki/Report_Definition_Language">RDL</ulink>, которые находятся в каталоге программы в подкаталоге <filename>Reports</filename>. Установив Majorsilence Reporting Designer на свой компьютеры вы сможете открывать и редактировать печатные формы.</para>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="ReportDesign.png" scalefit="1" width="100%"/>
+      </imageobject>
+      <imageobject role="html">
+        <imagedata fileref="ReportDesign.png"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</section>

@@ -227,6 +227,7 @@ title="Profiling step" ?><!-- This document was created with Syntext Serna Free.
         </imageobject>
       </mediaobject>
     </section>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_reports.xml" parse="xml"/>
   </chapter>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_users.xml" parse="xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_deletion.xml" parse="xml"/>
