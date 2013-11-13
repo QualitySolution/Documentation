@@ -9,7 +9,7 @@
 <!ENTITY product_name '<productname>&productname;</productname>' >
 
 <!ENTITY productnumber  
- '<productnumber condition="bazar">2.0</productnumber>
+ '<productnumber condition="bazar">2.1</productnumber>
   <productnumber condition="workwear">1.0</productnumber>'>
 
 <!ENTITY product_website 

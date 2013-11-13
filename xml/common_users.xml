@@ -21,7 +21,7 @@ title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.
   <screenshot>
     <mediaobject>
       <imageobject>
-        <imagedata fileref="User.png" condition="bazar"/>
+        <imagedata fileref="Bazar_User.png" condition="bazar"/>
         <imagedata fileref="Workwear_User.png" condition="workwear"/>
       </imageobject>
     </mediaobject>
