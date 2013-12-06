@@ -4,7 +4,7 @@
 
 <!ENTITY productname  
  '<phrase condition="bazar">QS: База арендаторов</phrase>
-  <phrase condition="workwear">QS: Учет спецодежды и имущества</phrase>'>
+  <phrase condition="workwear">QS: Спецодежда и имущество</phrase>'>
 
 <!ENTITY product_name '<productname>&productname;</productname>' >
 
