@@ -20,9 +20,11 @@ title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.
   <para condition="bazar">Помимо права изменять существующих в программе пользователей, пользователю также можно дать право изменять кассовые документы задним числом, то есть созданные не сегодня.</para>
   <screenshot>
     <mediaobject>
-      <imageobject>
-        <imagedata fileref="Bazar_User.png" condition="bazar"/>
-        <imagedata fileref="Workwear_User.png" condition="workwear"/>
+      <imageobject condition="bazar">
+        <imagedata fileref="Bazar_User.png"/>
+      </imageobject>
+      <imageobject condition="workwear">
+        <imagedata fileref="Workwear_User.png"/>
       </imageobject>
     </mediaobject>
   </screenshot>

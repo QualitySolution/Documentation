@@ -12,9 +12,11 @@ title="Profiling step" ?>
     <para>Если же объект или элемент справочника уже использовался в каком-либо месте, то программа предложит более сложное удаление, при котором вместе с этим объектом будут также удалены все объекты на него ссылающиеся и\или в них будут удалены ссылки на удаляемый объект. <phrase condition="bazar">При этом учитывается все дерево зависимостей, то есть, удаляя например тип места, вместе с ним будут удалены все места относящиеся к этому типу, а уже вместе с местами будут удалены все договора оформленные на эти места и т.д.</phrase></para>
     <screenshot>
       <mediaobject>
-        <imageobject>
-          <imagedata condition="bazar" fileref="DeleteExample.png"/>
-          <imagedata condition="workwear" fileref="Workwear_Deletion.png"/>
+        <imageobject condition="bazar">
+          <imagedata fileref="DeleteExample.png"/>
+        </imageobject>
+        <imageobject condition="workwear">
+          <imagedata fileref="Workwear_Deletion.png"/>
         </imageobject>
       </mediaobject>
     </screenshot>
