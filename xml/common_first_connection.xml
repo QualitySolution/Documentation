@@ -9,8 +9,11 @@ title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.
   <para>Для входа в программу нужно указать адрес сервера базы данных, имя пользователя и пароль. После успешного соединения &productname; автоматически запоминает настройки соединения, кроме пароля. В дальнейшем достаточно будет ввести только пароль.</para>
   <screenshot>
     <mediaobject>
-      <imageobject>
-        <imagedata fileref="Login.png"/>
+      <imageobject condition="bazar">
+        <imagedata fileref="Bazar_Login.png"/>
+      </imageobject>
+      <imageobject condition="workwear">
+        <imagedata fileref="Workwear_Login.png"/>
       </imageobject>
     </mediaobject>
   </screenshot>
