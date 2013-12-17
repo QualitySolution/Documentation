@@ -17,6 +17,9 @@ title="Profiling step" ?><!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.
       </imageobject>
     </mediaobject>
   </screenshot>
+  <tip>
+    <para>Если необходимо подключится к серверу с нестандартным номером порта, адрес сервера можно указать в формате <userinput>адрес:порт</userinput>.</para>
+  </tip>
   <para>После входа в базу каждый пользователь может изменить свой пароль, для этого используется меню <guimenu>Файл</guimenu> ⇒ <guimenuitem>Изменить пароль</guimenuitem>.</para>
   <screenshot>
     <mediaobject>
