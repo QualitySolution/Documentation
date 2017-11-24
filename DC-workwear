@@ -7,7 +7,7 @@
 ## These values are settings for the document defined by MAIN-daps-example.xml
 ## only. Please do not add additional settings here - if you need to
 ## customize other settings from /etc/daps/config, do so in
-## ~/.daps/config
+## ~/.config/daps/dapsrc
 
 ## Mandatory Parameter
 MAIN="workwear-UserGuide.xml"
@@ -29,10 +29,9 @@ ROOTID=""
 ## Custom Stylesheets
 ## (if not defined, the DocBook stylesheets will be used)
 ##
-#STYLEROOT="/usr/share/xml/docbook/stylesheet/suse/flyer"
-STYLEROOT="xsl"
+STYLEROOT="stylesheet"
 #FALLBACK_STYLEROOT=""
-FALLBACK_STYLEROOT="/usr/share/xml/docbook/stylesheet/suse"
+FALLBACK_STYLEROOT="/usr/share/xml/docbook/stylesheet/opensuse2013-ns"
 #HTML_CSS=""
 #EPUB_CSS=""
 
@@ -48,6 +47,7 @@ FOP_CONFIG_FILE="xsl/fo/fop-daps.xml"
 PROFCONDITION="workwear"
 #PROFOS=""
 #PROFVENDOR=""
+
 
 ## If you want to be able to source this file, so you do not have
 ## to specify the -d/--docconfig option with daps, uncomment the
